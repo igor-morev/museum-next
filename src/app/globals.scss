@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "../assets/scss/reset";
+@import "reset";
 
-@import "../assets/scss/variables";
-@import "../assets/scss/fonts";
+@import "variables";
+@import "fonts";
 
 :root {
   --foreground-rgb: 0, 0, 0;
