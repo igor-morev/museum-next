@@ -1,0 +1,107 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.intro {
+  padding-top: 56px;
+  background: black;
+  height: 100%;
+  .bg {
+    @include media-breakpoint-down(md) {
+      position: static;
+      width: 100%;
+      height: 200px;
+      max-width: 100%;
+      margin-left: 0;
+      background-size: contain;
+    }
+  }
+}
+
+.header {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 170px;
+  height: 144px;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+    display: flex;
+    height: auto;
+    .header-inner {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 24px;
+    }
+  }
+  h1 {
+    text-align: left;
+  }
+}
+
+$bg-width: 1400px;
+
+.bg {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: $bg-width;
+  margin-left: -$bg-width / 2;
+  background-image: url("../assets/images/z0.jpg");
+  height: 840px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.header-inner {
+  display: flex;
+}
+
+.header-logo {
+  margin-right: 96px;
+  border-right: 1px solid $brand-color;
+  padding-right: 40px;
+  img {
+    max-width: 208px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-right: 0;
+    padding: 0;
+    border-right: none;
+    margin-bottom: 20px;
+    img {
+      max-width: 80px;
+    }
+  }
+}
+
+$button-width: 110px;
+
+.intro-button-container {
+  margin-top: 30px;
+  margin-bottom: 32px * 2;
+  text-align: center;
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.description {
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+}

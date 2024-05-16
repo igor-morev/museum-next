@@ -1,0 +1,27 @@
+$white: white;
+$brand-color: #f15922;
+$green-color: #21D43A;
+$footer-bg-color: #484848;
+
+$previews-container-bg: rgba($white, .2);
+
+
+$h1-font-size: 60px;
+$large-text-size: 24px;
+$middle-text-size: 20px;
+$base-text-size: 16px;
+$base-line-height: 1.5;
+
+$font: 'Proxima Nova Rg';
+
+$base-header-height: 80px;
+$footer-height: 136px;
+$main-content-height: calc(100vh - #{$footer-height});
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;

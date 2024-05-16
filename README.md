@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Интерактивный музей с экспозициями
 
-## Getting Started
+![Демо][preview]
 
-First, run the development server:
+**Технологии:** Typescript, Next, SCSS, Tailwindcss, Redux-toolkit
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Основной юзер-кейс**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Пользователь заходит на сайт → пользователь видит рендер музея сверху и метки-экспозиции на ней.
+2. пользователь наводит на метку → видит попап с информацией
+3. пользователь кликает на метку → открывается окно → фон окна - некое фото, поверх фона 2 кнопки: "Запустить гида" и "Запустить видео" + кнопка "Назад".
+4. При клике по "Запустить гида" — начинает проигрываться аудио - на фоне начинают меняться изображения. После того, как гид закончил говорить - запускается видео.
+5. Пользователь может в любой момент остановить гида, либо кликом по паузе, либо запуском видео.
+6. Пользователь может переключать экспозиции либо переходом на карту, либо через нижний сайд-бар, в котором есть превью всех экспозиций.
+7. Пользователь может запустить 1 из 3х игр. Юзер кликает по иконке игры - игра запускается в новом окне. Есть кнопка возврата в музей.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Должна быть реализована вёрстка под планшеты и мобильные телефоны
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Требования (пояснительная записка) https://kitaev.notion.site/adf124718e7e42b6987d4fde670a539a
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+[preview]: /src/assets/images/museum-preview.png
