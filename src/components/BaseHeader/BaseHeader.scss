@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+
+.base-header {
+  padding-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+  height: $base-header-height;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .logo {
+    margin-right: 40px;
+  }
+  @include media-breakpoint-down(md) {
+    height: auto;
+    .logo {
+      margin-bottom: 20px;
+    }
+  }
+}

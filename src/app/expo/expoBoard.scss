@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.expo-bg {
+  display: inline-block;
+  position: relative;
+  transition: opacity 0.24s;
+  .start-button {
+    margin-left: -160px;
+    margin-top: -124px;
+  }
+  img {
+    user-select: none;
+    pointer-events: none;
+    max-width: none;
+  }
+  @include media-breakpoint-down(md) {
+    overflow-x: auto;
+    .dynamic-position {
+      display: none;
+    }
+  }
+}

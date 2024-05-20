@@ -5,11 +5,7 @@
   padding: 24px 24px 32px;
   border-radius: 4px;
   line-height: 1.1;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 0, 0, 0.5),
-      rgba(0, 37, 255, 0.5)
-    ),
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 37, 255, 0.5)),
     linear-gradient(to bottom, rgba(241, 89, 34, 0.8), rgba(241, 89, 34, 0.8));
   text-decoration: none;
   display: block;
@@ -20,7 +16,7 @@
   animation: bounce 2s infinite ease;
   &:hover {
     .start-button-icon {
-      background-image: url("../../assets/images/icons/z8-h.png");
+      background-image: url('../../assets/images/icons/z8-h.png');
     }
 
     .start-button-link-wrapper {
@@ -32,7 +28,7 @@
 }
 
 .start-button-icon {
-  background-image: url("../../assets/images/icons/z8.png");
+  background-image: url('../../assets/images/icons/z8.png');
   margin: auto;
   width: 80px;
   height: 80px;

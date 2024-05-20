@@ -1,0 +1,21 @@
+@import 'variables';
+
+.expo-mark {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  border-radius: 100%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 64px;
+  transition:
+    background-image 0.24s,
+    transform 0.1s;
+  background-position: center 3px;
+  &.slideUp {
+    transform: translateY(-15px);
+  }
+  &:hover {
+    background-position: center -56px;
+  }
+}
