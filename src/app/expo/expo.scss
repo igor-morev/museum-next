@@ -1,0 +1,157 @@
+@import 'variables';
+@import 'mixins';
+
+.logo {
+  width: 80px;
+  display: block;
+}
+
+.expo {
+  background: black;
+  height: 100%;
+  min-width: 768px;
+  overflow: hidden;
+  .base-header {
+    align-items: flex-start;
+  }
+  &.loading {
+    .expo-bg,
+    .expo-preview {
+      opacity: 0;
+    }
+  }
+
+  .expo-info-wrapper {
+    position: absolute;
+    z-index: 2;
+    bottom: 10rem;
+    left: 80px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    min-width: auto;
+  }
+}
+
+.expo-info {
+  border-radius: 10px;
+  border: solid 1px $green-color;
+  background: rgba(black, 0.6);
+  line-height: 1.38;
+  padding: 8px 1rem 10px 1rem;
+  width: 288px;
+  max-width: 288px;
+  margin-bottom: 2rem;
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    width: auto;
+    display: block;
+  }
+}
+
+.expo-info-image {
+  margin-right: 1rem;
+  width: 32px;
+  min-width: 32px;
+  margin-top: 5px;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.expo-content {
+  height: 100%;
+  top: -$base-header-height;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.expo-info-mobile {
+  display: none;
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-direction: column;
+    .expo-guide-wrapper {
+      margin-bottom: 40px;
+    }
+    .start-button {
+      margin: auto;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.expo-footer {
+  height: $footer-height;
+  color: white;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: $footer-bg-color;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+}
+
+.expo-pattern {
+  position: absolute;
+  top: 0;
+  width: 33%;
+  height: 100%;
+  z-index: 1;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 480px;
+  opacity: 0.5;
+}
+
+.pattern-left {
+  left: -300px;
+  background-position-x: right;
+}
+
+.pattern-right {
+  right: -300px;
+  background-position-x: left;
+}
+
+.expo-info-align {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+  align-items: flex-start;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.expo-info-align-mobile {
+  display: none;
+  @include media-breakpoint-down(md) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.expo-guide-mobile {
+  display: none;
+  @include media-breakpoint-down(md) {
+    display: block;
+    margin-bottom: 40px;
+    margin-right: 20px;
+  }
+}

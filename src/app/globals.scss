@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "reset";
+@import 'reset';
 
-@import "variables";
-@import "fonts";
+@import 'variables';
+@import 'fonts';
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -74,12 +74,12 @@ p {
   height: 24px;
   z-index: 22;
   cursor: pointer;
-  background-image: url("../assets/images/icons/close.png");
+  background-image: url('../assets/images/icons/close.png');
   background-repeat: no-repeat;
   background-size: cover;
   transition: background-image 0.24s;
   &:hover {
-    background-image: url("../assets/images/icons/close-hover.png");
+    background-image: url('../assets/images/icons/close-hover.png');
   }
   @include media-breakpoint-down(md) {
     top: 16px;
@@ -87,7 +87,7 @@ p {
   }
 }
 
-.container {
+.expo-container {
   padding: 0 80px;
   @include media-breakpoint-down(md) {
     padding: 0 16px;

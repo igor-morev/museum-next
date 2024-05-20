@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 // Name of the next breakpoint, or null for the last breakpoint.
 //
 //    >> breakpoint-next(sm)
@@ -13,11 +13,7 @@
   $breakpoint-names: map-keys($breakpoints)
 ) {
   $n: index($breakpoint-names, $name);
-  @return if(
-    $n != null and $n < length($breakpoint-names),
-    nth($breakpoint-names, $n + 1),
-    null
-  );
+  @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
 }
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 //
