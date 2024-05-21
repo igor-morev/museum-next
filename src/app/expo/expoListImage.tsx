@@ -36,6 +36,7 @@ export default function ExpoListImage() {
   return (
     <Image
       unoptimized
+      priority
       ref={imageRef}
       src={renderBg}
       alt="expo"

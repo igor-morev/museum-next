@@ -38,27 +38,6 @@ export function getGameIdParam(pathname: string) {
   return urlArray[4];
 }
 
-export function rInterval(callback: Function, delay: number) {
-  let dateNow = Date.now;
-
-  let requestAnimation = window.requestAnimationFrame;
-  let start = dateNow();
-  let stop: number;
-
-  const intervalFunc = function () {
-    // eslint-disable-next-line no-unused-expressions
-    dateNow() - start < delay || ((start += delay), callback());
-    stop || requestAnimation(intervalFunc);
-  };
-
-  requestAnimation(intervalFunc);
-  return {
-    clear: function () {
-      stop = 1;
-    },
-  };
-}
-
 export function getInterpolatedValue(value: number, natural: number, current: number) {
   if (!value || !current || !natural) {
     return 0;
