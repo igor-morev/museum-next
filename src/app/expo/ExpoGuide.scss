@@ -1,0 +1,60 @@
+@import 'variables';
+
+$guide-width: 128px;
+$guide-active-width: 336px;
+
+.expo-guide {
+  width: $guide-width;
+  min-width: $guide-width;
+  height: 80px;
+  background-image: url('../../assets/images/btns-sprite/audio-guide.png');
+  background-repeat: no-repeat;
+  margin-right: 32px;
+  position: absolute;
+  background-size: cover;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px 0 $brand-color;
+  transition: box-shadow 0.24s;
+  cursor: pointer;
+  background-color: rgba(black, 0.5);
+  margin-top: -83px;
+  .soundwave {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.24s;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    height: 69px;
+    width: 225px;
+    border-radius: 40px;
+  }
+  &.active {
+    background-image: url('../../assets/images/btns-sprite/audio-guide-play.png');
+    width: $guide-active-width;
+    min-width: $guide-active-width;
+    height: 80px;
+    .soundwave {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &:hover {
+    background-position-y: -80px;
+  }
+
+  &.active {
+    &:hover {
+      background-position-y: -80px;
+    }
+  }
+}
+
+.expo-guide-wrapper {
+  z-index: 1;
+}
+
+.expo-guide-picture {
+  width: 128px;
+  min-width: 128px;
+}
