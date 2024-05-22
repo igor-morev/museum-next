@@ -1,6 +1,6 @@
 'use client';
-import ExpoListImage from './expoListImage';
-import ExpoMarks from './expoMarks';
+import ExpoListImage from './ExpoListImage';
+import ExpoMarks from './ExpoMarks';
 
 import './expoBoard.scss';
 import { useAppSelector } from '@/hooks/store';

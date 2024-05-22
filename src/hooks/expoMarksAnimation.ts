@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function useExpoMarksAnimation(marks: ExpoDto[]) {
   const [animation, setAnimation] = useState<Record<string, boolean>>({});
-  let animationTime = 700;
+  const animationTime = 700;
   let requestRef = useRef(0);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function useExpoMarksAnimation(marks: ExpoDto[]) {
     return () => {
       cancelAnimationFrame(requestRef.current);
     };
-  }, []);
+  }, [marks]);
 
   return animation;
 }

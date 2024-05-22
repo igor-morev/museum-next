@@ -1,4 +1,4 @@
-import Expo from './expo';
+import Expo from './Expo';
 
 export default function ExpoPage() {
   return <Expo></Expo>;

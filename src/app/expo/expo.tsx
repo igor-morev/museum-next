@@ -8,10 +8,11 @@ import { fetchExpoList } from '@/api/fetchExpoList';
 
 import patternLeft from '@/assets/images/pattern2.png';
 import patternRight from '@/assets/images/pattern1.png';
-import ExpoBoard from './expoBoard';
+import ExpoBoard from './ExpoBoard';
 import StartButton from '@/components/StartButton/StartButton';
+import ExpoGuide from './ExpoGuide';
 
-export default async function Page() {
+export default async function Expo() {
   const expoItems = await fetchExpoList();
 
   return (
@@ -29,7 +30,9 @@ export default async function Page() {
           </div>
         </div>
       </BaseHeader>
-      <div className="expo-info-wrapper">{/* <ExpoGuide url={audio}/> */}</div>
+      <div className="expo-info-wrapper">
+        <ExpoGuide src={'/audio/z0.mp3'} />
+      </div>
       <div className="expo-content">
         <div
           className="expo-pattern pattern-left"
