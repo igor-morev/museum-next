@@ -13,6 +13,7 @@ const initialState: ExpoState = {
     nHeight: null,
     width: null,
     height: null,
+    left: null,
   },
 };
 

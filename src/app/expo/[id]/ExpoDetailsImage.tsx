@@ -1,34 +1,43 @@
 'use client';
-import Image from 'next/image';
-
-import renderBg from '@/assets/images/z00.jpg';
-import { useEffect, useRef } from 'react';
-import { calculateAspectRatioFit } from '@/utils/utils';
 import { useAppDispatch, useAppSelector } from '@/hooks/store';
 import { selectContainerData, setContainerData } from '@/store/expoSlice';
+import { useRef, useEffect } from 'react';
 
-export default function ExpoListImage() {
+import resizeToFit from 'intrinsic-scale';
+
+import Image from 'next/image';
+
+import './ExpoDetailsImage.scss';
+
+export default function ExpoDetailsImage({ bg }: { bg: string }) {
   const imageRef = useRef<null | HTMLImageElement>(null);
 
   const dispatch = useAppDispatch();
-  const bg = useAppSelector(selectContainerData);
+  const bgState = useAppSelector(selectContainerData);
 
   function saveImageData() {
     const image = imageRef.current!;
+    const parent = image.parentElement!;
 
-    const sizeData = calculateAspectRatioFit(
-      image.clientWidth,
-      image.clientHeight,
-      window.innerWidth,
-      window.innerHeight,
+    const result = resizeToFit(
+      'cover',
+      {
+        width: image.clientWidth,
+        height: image.clientHeight,
+      },
+      {
+        width: parent.clientWidth,
+        height: parent.clientHeight,
+      },
     );
 
     dispatch(
       setContainerData({
         nWidth: image.naturalWidth,
         nHeight: image.naturalHeight,
-        width: sizeData.width,
-        height: sizeData.height,
+        width: result.width,
+        height: result.height,
+        left: result.x,
       }),
     );
   }
@@ -46,9 +55,10 @@ export default function ExpoListImage() {
       unoptimized
       priority
       ref={imageRef}
-      src={renderBg}
+      src={bg}
       alt="expo"
-      style={{ width: bg.width!, height: bg.height! }}
+      className={'expo-details-bg'}
+      style={{ width: bgState.width!, height: bgState.height!, left: bgState.left! }}
       onLoad={saveImageData}
     />
   );

@@ -1,3 +1,5 @@
-export default function ExpoDetails() {
-  return 'sdf';
+import ExpoDetails from './ExpoDetails';
+
+export default function Page({ params }: { params: { id: string } }) {
+  return <ExpoDetails params={params}></ExpoDetails>;
 }
