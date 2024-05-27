@@ -10,7 +10,7 @@ export default function BaseHeader({
   children,
 }: Readonly<{
   logoUrl: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }>) {
   return (
     <div className="base-header">

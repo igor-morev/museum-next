@@ -3,4 +3,5 @@ export type ExpoListImage = {
   nHeight: number | null;
   width: number | null;
   height: number | null;
+  left?: number | null;
 };

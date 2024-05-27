@@ -5,6 +5,8 @@
 @import 'reset';
 
 @import 'variables';
+@import 'mixins';
+
 @import 'fonts';
 
 :root {
@@ -166,5 +168,22 @@ img {
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
+  }
+}
+
+.main-content {
+  position: relative;
+  height: $main-content-height;
+  min-height: 1000px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  &.no-footer {
+    height: auto;
+  }
+  @include media-breakpoint-down(md) {
+    height: auto;
+    overflow: hidden;
+    min-height: $main-content-height;
   }
 }

@@ -1,0 +1,54 @@
+@import 'variables';
+
+.go-button-wrapper {
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 16px;
+}
+
+.go-button {
+  a {
+    display: inline-flex;
+    text-align: left;
+    width: 168px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid rgba($white, 0.5);
+    background-color: rgba(black, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.13;
+    padding: 12px 16px 16px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      .go-button-icon {
+        background-position-y: 32px;
+      }
+    }
+  }
+}
+
+.go-button-text {
+  margin-right: 5px;
+}
+
+.go-button-icon {
+  background-image: url('../../../assets/images/next-expo.png');
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.go-button-back {
+  margin-right: 0;
+  .go-button-icon {
+    margin-right: 10px;
+    transform: rotate(180deg);
+  }
+}
