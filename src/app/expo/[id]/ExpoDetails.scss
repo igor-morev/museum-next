@@ -181,12 +181,6 @@ h1 {
   border: 0;
 }
 
-.image-modal-content {
-  height: 100%;
-  background-size: contain !important;
-  position: relative;
-}
-
 .expo-description {
   font-size: $large-text-size;
   @include media-breakpoint-down(md) {

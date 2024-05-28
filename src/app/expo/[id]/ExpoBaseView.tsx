@@ -1,5 +1,4 @@
 import { ExpoDto } from '@/api';
-import ExpoGuide from '../ExpoGuide';
 
 import './ExpoBaseView.scss';
 import GoButton from './GoButton';
@@ -8,13 +7,17 @@ export default function ExpoBaseView({
   expo,
   link,
   topRight,
+  video,
   center,
+  audioGuide,
   bottomRight,
 }: {
   expo: ExpoDto;
   link?: string;
+  video?: React.ReactNode;
   topRight?: React.ReactNode;
   center?: React.ReactNode;
+  audioGuide: React.ReactNode;
   bottomRight?: React.ReactNode;
 }) {
   const { heading, description, prevId, nextId } = expo;
@@ -34,8 +37,8 @@ export default function ExpoBaseView({
       {center}
       <div className="expo-bottom">
         <div className="expo-bottom-left">
-          <ExpoGuide src={`/audio/${expo.id}.mp3`} />
-          {/* {this.props.video} */}
+          {audioGuide}
+          {video}
         </div>
         {bottomRight}
       </div>

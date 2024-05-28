@@ -1,0 +1,100 @@
+.image-card {
+  cursor: pointer;
+  &:hover {
+    .border-image-perspective {
+      background: rgba(white, 0.2);
+    }
+  }
+  .icon-button {
+    box-shadow: none;
+  }
+}
+
+.border-image-perspective-wrapper {
+  perspective: 300px;
+  .icon-button {
+    box-shadow: none;
+  }
+}
+
+$draw-border-width: 4px;
+
+.border-image-perspective {
+  border: $draw-border-width dotted rgba(white, 0.7);
+  width: 355px;
+  height: 346px;
+  position: absolute;
+  top: -200px;
+  left: -160px;
+  transform-style: preserve-3d;
+  perspective-origin: center;
+  backface-visibility: hidden;
+  transform: rotateY(-30deg);
+}
+
+@mixin drawSizes {
+  width: calc(100% + #{$draw-border-width * 2});
+  height: calc(100% + #{$draw-border-width * 2});
+}
+
+.draw {
+  // overflow: hidden;
+}
+.draw::before,
+.draw::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  border: $draw-border-width solid transparent;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: -$draw-border-width;
+  left: -$draw-border-width;
+  border-top-color: white;
+  border-right-color: white;
+  animation: border 2s infinite;
+}
+.draw::after {
+  bottom: -$draw-border-width;
+  right: -$draw-border-width;
+  animation:
+    border 2s 1s infinite,
+    borderColor 2s 1s infinite;
+}
+
+@keyframes border {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  25% {
+    width: calc(100% + #{$draw-border-width * 2});
+    height: 0;
+  }
+  50% {
+    @include drawSizes();
+  }
+  100% {
+    @include drawSizes();
+  }
+}
+@keyframes borderColor {
+  0% {
+    border-bottom-color: white;
+    border-left-color: white;
+  }
+  50% {
+    border-bottom-color: white;
+    border-left-color: white;
+  }
+  51% {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}

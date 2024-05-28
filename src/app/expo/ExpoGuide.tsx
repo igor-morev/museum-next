@@ -29,7 +29,7 @@ export default function ExpoGuide({
 
   useEffect(() => {
     if (isStopping) {
-      ref.current?.pause();
+      setIsPlaying(false);
     }
   }, [isStopping]);
 
