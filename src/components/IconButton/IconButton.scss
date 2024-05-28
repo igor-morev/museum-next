@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mixins';
+
+.icon-button {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 10px 0 $brand-color;
+  background-size: cover;
+  transition: background-image 0.24s;
+  background-color: rgba(black, 0.5);
+  @include media-breakpoint-down(sm) {
+    box-shadow: none;
+  }
+}

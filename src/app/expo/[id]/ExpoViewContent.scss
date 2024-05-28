@@ -1,0 +1,25 @@
+.image-curtain {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 100;
+  background: black;
+  transform: translateY(-100%);
+  transition: all 0.24s;
+  opacity: 0;
+  &.showed {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.image-modal-content {
+  height: 100%;
+  background-size: contain !important;
+  position: relative;
+}
