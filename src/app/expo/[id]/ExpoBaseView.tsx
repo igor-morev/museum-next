@@ -13,7 +13,7 @@ export default function ExpoBaseView({
   bottomRight,
 }: {
   expo: ExpoDto;
-  link?: string;
+  link?: React.ReactNode;
   video?: React.ReactNode;
   topRight?: React.ReactNode;
   center?: React.ReactNode;

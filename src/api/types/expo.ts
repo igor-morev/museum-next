@@ -5,7 +5,8 @@ export interface ExpoDto {
   previewHeading: string;
   heading: string;
   description: string;
-  videoId: string | string[];
+  videoId?: string;
+  videoIds?: string[];
   link?: string;
   position: {
     top: number;

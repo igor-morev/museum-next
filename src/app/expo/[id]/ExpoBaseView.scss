@@ -1,6 +1,9 @@
 @import 'variables';
+@import 'mixins';
 
-.game-play {
-  text-align: center;
-  margin-bottom: 2rem;
+.expo-description {
+  font-size: $large-text-size;
+  @include media-breakpoint-down(md) {
+    font-size: $base-text-size;
+  }
 }
