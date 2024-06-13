@@ -1,6 +1,6 @@
 import { ExpoListImage } from '@/store/expo-list-image';
 import { getInterpolatedValue } from '@/utils/utils';
-import IconButtonImage from '@/components/IconButtonImage/IconButtonImage';
+import IconButtonImage from '@/ui/IconButtonImage/IconButtonImage';
 
 import './Image3dCard.scss';
 

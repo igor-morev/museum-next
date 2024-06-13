@@ -1,5 +1,5 @@
 import { fetchExpoById } from '@/api/fetchExpoList';
-import BaseHeader from '@/components/BaseHeader/BaseHeader';
+import BaseHeader from '@/ui/BaseHeader/BaseHeader';
 import Image from 'next/image';
 
 import './ExpoDetails.scss';

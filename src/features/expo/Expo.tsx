@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import BaseHeader from '@/components/BaseHeader/BaseHeader';
+import BaseHeader from '@/ui/BaseHeader/BaseHeader';
 import icSmile from '@/assets/images/icons/ic-smile.png';
 
 import './Expo.scss';
@@ -9,8 +9,8 @@ import { fetchExpoList } from '@/api/fetchExpoList';
 import patternLeft from '@/assets/images/pattern2.png';
 import patternRight from '@/assets/images/pattern1.png';
 import ExpoBoard from './ExpoBoard';
-import StartButton from '@/components/StartButton/StartButton';
-import ExpoGuide from './ExpoGuide';
+import StartButton from '@/ui/StartButton/StartButton';
+import ExpoGuide from '../ExpoGuide/ExpoGuide';
 
 export default async function Expo() {
   const expoItems = await fetchExpoList();
