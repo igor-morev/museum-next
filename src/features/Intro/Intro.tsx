@@ -3,7 +3,7 @@ import Image from 'next/image';
 import './Intro.scss';
 
 import logoGroup from '@/assets/images/logo/logo-group.png';
-import StartButton from '@/components/StartButton/StartButton';
+import StartButton from '@/ui/StartButton/StartButton';
 
 export default function Intro() {
   return (

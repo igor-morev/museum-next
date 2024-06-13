@@ -50,15 +50,8 @@ export default function ExpoGuide({
       <Image src={soundPicture} className="expo-guide-picture" alt="" />
       <div className={`expo-guide ${isPlaying ? 'active' : ''}`} onClick={toggleAudio}>
         <div className="soundwave-container">
-          <Image className="soundwave" src={soundWaveIcon || ''} alt="" />
+          <Image className="soundwave" src={soundWaveIcon || ''} alt="" unoptimized />
           <audio src={src} ref={ref} onEnded={onEnded} />
-          {/* <ReactAudioPlayer
-        onCanPlayThrough={this.onCanPlay}
-        onAbort={this.onAbort}
-        onEnded={this.onAudioFinished}
-        src={url}
-        ref={(element) => { this.audio = element; }}
-      /> */}
         </div>
       </div>
     </div>

@@ -5,8 +5,8 @@ import ExpoMarks from './ExpoMarks';
 import './expoBoard.scss';
 import { useAppSelector } from '@/hooks/store';
 import { selectContainerData } from '@/store/expoSlice';
-import StartButton from '@/components/StartButton/StartButton';
-import DynamicPosition from '@/components/DynamicPosition/DynamicPosition';
+import StartButton from '@/ui/StartButton/StartButton';
+import DynamicPosition from '@/ui/DynamicPosition/DynamicPosition';
 import { ExpoDto } from '@/api/types/expo';
 
 export default function ExpoBoard({ expoItems }: { expoItems: ExpoDto[] }) {

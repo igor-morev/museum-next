@@ -1,7 +1,7 @@
 'use client';
 import { ExpoDto } from '@/api';
-import DynamicPosition from '@/components/DynamicPosition/DynamicPosition';
-import Image3dCard from '@/components/Image3dCard/Image3dCard';
+import DynamicPosition from '@/ui/DynamicPosition/DynamicPosition';
+import Image3dCard from '@/ui/Image3dCard/Image3dCard';
 import { VIDEO_OPTIONS, zoneIds } from '@/constants/options';
 import { useAppSelector } from '@/hooks/store';
 import { selectContainerData } from '@/store/expoSlice';
@@ -16,10 +16,10 @@ import imageRight from '@/assets/images/walls-right.jpg';
 import imageHotLost from '@/assets/images/hot-lost.jpg';
 
 import './ExpoViewContent.scss';
-import ExpoGuide from '../ExpoGuide';
-import IconButtonPlay from '@/components/IconButtonPlay/IconButtonPlay';
-import IconButtonLink from '@/components/IconButtonLink/IconButtonLink';
+import IconButtonPlay from '@/ui/IconButtonPlay/IconButtonPlay';
+import IconButtonLink from '@/ui/IconButtonLink/IconButtonLink';
 import Link from 'next/link';
+import ExpoGuide from '../ExpoGuide/ExpoGuide';
 
 Modal.setAppElement('#modals');
 
