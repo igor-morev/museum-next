@@ -94,17 +94,6 @@
   }
 }
 
-.expo-footer {
-  height: $footer-height;
-  color: white;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background-color: $footer-bg-color;
-  user-select: none;
-  position: relative;
-  z-index: 2;
-}
-
 .expo-pattern {
   position: absolute;
   top: 0;
