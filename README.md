@@ -1,13 +1,14 @@
-## Интерактивный музей с экспозициями
+## Interactive museum with expos
 
+Check out the **live demo** ->
 ![Main expo page][preview]
-![Details expo page][preview]
+![Details expo page][preview-page]
 
 ### Technologies
 
 - Typescript
 - Next
-- SCSS,
+- SCSS
 - Tailwindcss
 - Redux-toolkit
 
@@ -58,3 +59,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 [preview]: /src/assets/images/museum-preview.png
+[preview]: /src/assets/images/museum-preview-page.png
