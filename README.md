@@ -1,6 +1,7 @@
 ## Interactive museum with expos
 
 Check out the **live demo** ->
+
 ![Main expo page][preview]
 ![Details expo page][preview-page]
 
@@ -59,4 +60,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 [preview]: /src/assets/images/museum-preview.png
-[preview]: /src/assets/images/museum-preview-page.png
+[preview-page]: /src/assets/images/museum-preview-page.png
