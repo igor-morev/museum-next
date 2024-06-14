@@ -33,6 +33,7 @@ export default async function Expo() {
               </div>
             </div>
           </BaseHeader>
+
           <div className="expo-info-wrapper">
             <ExpoGuide src={'/audio/z0.mp3'} />
           </div>
