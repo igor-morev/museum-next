@@ -3,10 +3,10 @@ import { ExpoDto } from './types';
 import { promises as fs, readFileSync } from 'fs';
 
 export async function fetchExpoList() {
-  const file = path.join(process.cwd(), 'public', 'expo.json');
-  const stringified = readFileSync(file, 'utf-8');
+  const expoPath = path.join(process.cwd(), 'public', 'expo.json');
+  const file = readFileSync(expoPath, 'utf-8');
 
-  const result = JSON.parse(stringified) as ExpoDto[];
+  const result = (await new Response(file).json()) as ExpoDto[];
 
   return result.map((item, i) => {
     if (i === 0) {
