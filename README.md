@@ -1,6 +1,8 @@
-## Interactive museum with expos
+## Digital interactive museum
 
-Check out the **live demo** ->
+The digital interactive museum built on `NextJs`
+
+> Check out the **live demo** -> ...
 
 ![Main expo page][preview]
 
@@ -27,11 +29,11 @@ Have to be done layout for tablets and mobile phones.
 
 ### Challenges
 
-- To create fully a resizable and tricky layout with a background image and icons above on it
+- To create a fully resizable and tricky layout with based on pic
 - To adjust icons automaticaly according to the image size
-- To make 11 expo details pages with the custom UI
+- To make 11 expo details pages with the custom UI layout
 - To build solution for the carousel in the footer from scratch with auto focusing to the active element
-- To decide which React components should be server and client type
+- To decide which React components should be on server and client side as well
 
 ## Интерактивный музей с экспозициями
 
