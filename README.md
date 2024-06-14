@@ -2,7 +2,7 @@
 
 The digital interactive museum built on `NextJs`
 
-> Check out the **live demo** -> https://museum-next-o39dzhtx6-igors-projects-34c7c687.vercel.app/
+> Check out the **live demo** -> https://museum-next-henna.vercel.app
 
 ![Main expo page][preview]
 
