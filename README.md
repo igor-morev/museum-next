@@ -1,6 +1,8 @@
-## Interactive museum with expos
+## Digital interactive museum
 
-Check out the **live demo** ->
+The digital interactive museum built on `NextJs`
+
+> Check out the **live demo** ->
 
 ![Main expo page][preview]
 
