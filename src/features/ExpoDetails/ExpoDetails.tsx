@@ -20,12 +20,7 @@ export default async function ExpoDetails({ params }: { params: { id: string } }
     <>
       <div className="main-content">
         <div className={`expo-details expo-0`}>
-          <div
-            className={'expo-details-inner'}
-            style={{
-              background: 'black url(' + bg.src + ') no-repeat center center',
-            }}
-          >
+          <div className={'expo-details-inner'}>
             <ExpoDetailsImage bg={bg}></ExpoDetailsImage>
             <div className="expo-overlay" />
             <div className="expo-container">

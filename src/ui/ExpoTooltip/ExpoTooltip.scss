@@ -1,0 +1,34 @@
+div.expo-tooltip {
+  width: 176px;
+  text-align: left;
+  line-height: 1.38;
+  padding: 1rem;
+  border-radius: 0;
+  &.place-top {
+    margin-top: -2px;
+    &:after {
+      bottom: -7px;
+    }
+  }
+  &.place-bottom {
+    margin-top: 5px;
+    &:after {
+      top: -7px;
+    }
+  }
+}
+
+.expo-tooltip-name {
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.expo-tooltip-heading {
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+
+.expo-tooltip-text {
+  font-weight: 300;
+}

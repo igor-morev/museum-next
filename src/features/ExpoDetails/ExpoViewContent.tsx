@@ -4,7 +4,7 @@ import DynamicPosition from '@/ui/DynamicPosition/DynamicPosition';
 import Image3dCard from '@/ui/Image3dCard/Image3dCard';
 import { VIDEO_OPTIONS, zoneIds } from '@/constants/options';
 import { useAppSelector } from '@/hooks/store';
-import { selectContainerData } from '@/store/expoSlice';
+import { selectContainerData, selectLoading } from '@/store/expoSlice';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import YouTube from 'react-youtube';
@@ -25,6 +25,7 @@ Modal.setAppElement('#modals');
 
 export default function ExpoViewContent({ expo }: { expo: ExpoDto }) {
   const containerData = useAppSelector(selectContainerData);
+  const loading = useAppSelector(selectLoading);
 
   const [isShowedImageModal, setIsShowedImageModal] = useState(false);
   const [videoId, setVideoId] = useState<string | null>(null);
@@ -302,7 +303,7 @@ export default function ExpoViewContent({ expo }: { expo: ExpoDto }) {
 
   return (
     <>
-      {renderViews()}
+      <div className={'h-100 ' + (loading ? 'loading' : '')}>{renderViews()}</div>
       <Modal
         isOpen={!!videoId}
         contentLabel="Expo video"

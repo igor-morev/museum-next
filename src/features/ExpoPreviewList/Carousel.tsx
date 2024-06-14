@@ -9,11 +9,11 @@ import { ExpoDto } from '@/api';
 import './Carousel.scss';
 import { useEffect, useRef, useState } from 'react';
 
-const previewWidth = 120;
-const previewOffset = 24;
-const step = 100;
-const padding = 10;
-const startX = padding;
+const PREVIEW_WIDTH = 120;
+const PREVIEW_OFFSET = 24;
+const STEP = 100;
+const PADDING = 10;
+const START_X = PADDING;
 
 export default function Carousel({
   expoItems,
@@ -25,7 +25,7 @@ export default function Carousel({
   const viewportRef = useRef<null | HTMLDivElement>(null);
   const carouselRef = useRef<null | HTMLDivElement>(null);
 
-  const [x, setX] = useState(startX);
+  const [x, setX] = useState(START_X);
   const [maxX, setMaxX] = useState(0);
 
   function moveRight() {
@@ -33,7 +33,7 @@ export default function Carousel({
       return;
     }
 
-    let newX = x - step;
+    let newX = x - STEP;
 
     if (Math.abs(newX) > maxX) {
       newX = -maxX;
@@ -46,21 +46,21 @@ export default function Carousel({
     if (isLeftFinished()) {
       return;
     }
-    let newX = x + step;
+    let newX = x + STEP;
 
-    if (newX > startX) {
-      newX = startX;
+    if (newX > START_X) {
+      newX = START_X;
     }
 
     setX(newX);
   }
 
   function updateMax() {
-    setMaxX(carouselRef.current!.offsetWidth - viewportRef.current!.offsetWidth + startX);
+    setMaxX(carouselRef.current!.offsetWidth - viewportRef.current!.offsetWidth + START_X);
   }
 
   function isLeftFinished() {
-    return x === startX;
+    return x === START_X;
   }
 
   function isRightFinished() {
@@ -70,11 +70,11 @@ export default function Carousel({
   function moveToActive() {
     if (current) {
       const index = expoItems.findIndex((expo) => expo.id === current.id);
-      const expoWidthWithOffset = previewWidth + previewOffset;
+      const expoWidthWithOffset = PREVIEW_WIDTH + PREVIEW_OFFSET;
       let position = -(index * expoWidthWithOffset - viewportRef.current!.offsetWidth / 2);
 
-      if (position > startX) {
-        position = startX;
+      if (position > START_X) {
+        position = START_X;
       }
 
       if (Math.abs(position) > maxX) {
@@ -84,10 +84,6 @@ export default function Carousel({
       setX(position);
     }
   }
-
-  useEffect(() => {
-    carouselRef.current!.style.transform = `translateX(${x}px)`;
-  }, [x]);
 
   useEffect(() => {
     moveToActive();
@@ -120,7 +116,13 @@ export default function Carousel({
           }
           ref={viewportRef}
         >
-          <div className="expo-previews" ref={carouselRef}>
+          <div
+            className="expo-previews"
+            ref={carouselRef}
+            style={{
+              transform: `translateX(${x}px)`,
+            }}
+          >
             {expoItems.map((expo, index) => (
               <ExpoPreview
                 key={expo.id}

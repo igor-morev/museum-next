@@ -18,12 +18,11 @@ export default function DynamicPosition({
   function getLeft() {
     const iValue = getInterpolatedValue(left, context.nWidth!, context.width!);
     if (iValue) {
-      // if (!context.left) {
-      //   return iValue;
-      // } else {
-      //   return iValue + context.left;
-      // }
-      return iValue;
+      if (!context.left) {
+        return iValue;
+      } else {
+        return iValue + context.left;
+      }
     }
 
     return 'auto';

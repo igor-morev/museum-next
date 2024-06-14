@@ -14,12 +14,6 @@
   .base-header {
     align-items: flex-start;
   }
-  &.loading {
-    .expo-bg,
-    .expo-preview {
-      opacity: 0;
-    }
-  }
 
   .expo-info-wrapper {
     position: absolute;
