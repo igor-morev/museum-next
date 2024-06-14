@@ -1,4 +1,4 @@
-import Expo from '@/features/Expo/Expo';
+import Expo from '@/features/ExpoPage/Expo';
 
 export default function ExpoPage() {
   return <Expo></Expo>;
