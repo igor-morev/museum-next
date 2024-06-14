@@ -20,7 +20,7 @@ export default function ExpoPreviewList({
       {currentPreviewImage && (
         <div className="current-preview">
           <Link href={'/expo'}>
-            <Image src={currentPreviewImage} alt="" />
+            <Image src={currentPreviewImage} alt="Current expo preview" />
           </Link>
         </div>
       )}

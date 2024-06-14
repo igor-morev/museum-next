@@ -2,6 +2,10 @@
 import './ExpoMark.scss';
 import Link from 'next/link';
 import { ExpoDto } from '@/api';
+import ReactDOMServer from 'react-dom/server';
+
+import { Tooltip } from 'react-tooltip';
+import ExpoTooltip from '@/ui/ExpoTooltip/ExpoTooltip';
 
 export function ExpoMark({
   mark,
@@ -22,16 +26,20 @@ export function ExpoMark({
   function afterHoverLeave() {}
 
   return (
-    <Link
-      href={`/expo/${mark.id}`}
-      className={`expo-mark ${isAnimating ? 'slideUp' : ''}`}
-      onMouseEnter={afterHoverEnter}
-      onMouseLeave={afterHoverLeave}
-      style={{
-        top,
-        left,
-        backgroundImage: `url(${url})`,
-      }}
-    />
+    <>
+      <Link
+        href={`/expo/${mark.id}`}
+        className={`expo-mark ${isAnimating ? 'slideUp' : ''}`}
+        data-tooltip-id={mark.id}
+        onMouseEnter={afterHoverEnter}
+        onMouseLeave={afterHoverLeave}
+        style={{
+          top,
+          left,
+          backgroundImage: `url(${url})`,
+        }}
+      />
+      <ExpoTooltip expo={mark} />
+    </>
   );
 }

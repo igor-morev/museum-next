@@ -4,16 +4,8 @@ import Image from 'next/image';
 
 import './ExpoPreview.scss';
 
-export default function ExpoPreview({
-  expo,
-  index,
-  active,
-}: {
-  expo: ExpoDto;
-  index: number;
-  active: boolean;
-}) {
-  const { id, heading } = expo;
+export default function ExpoPreview({ expo, active }: { expo: ExpoDto; active: boolean }) {
+  const { id, heading, number } = expo;
   const url = require(`@/assets/images/${id}-prew.png`).default;
 
   return (
@@ -22,7 +14,7 @@ export default function ExpoPreview({
         <Image src={url} draggable={false} alt="" />
       </div>
       <div className="expo-preview-overlay">
-        <div className="preview-number">{index + 1}</div>
+        <div className="preview-number">{number}</div>
         <div className="preview-name">{heading}</div>
       </div>
     </Link>

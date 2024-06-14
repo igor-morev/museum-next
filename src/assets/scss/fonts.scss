@@ -1,12 +1,6 @@
-@import '/src/assets/fonts/ProximaNova/stylesheet.css';
+@import '../assets/fonts/ProximaNova/stylesheet.css';
 @import 'variables';
 @import 'mixins';
-
-body {
-  font-family: $font;
-  font-size: $base-text-size;
-  line-height: 1.5;
-}
 
 h1 {
   font-size: $h1-font-size;

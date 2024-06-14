@@ -1,6 +1,6 @@
 'use client';
 import { useAppDispatch, useAppSelector } from '@/hooks/store';
-import { selectContainerData, setContainerData } from '@/store/expoSlice';
+import { selectContainerData, selectLoading, setContainerData } from '@/store/expoSlice';
 import { useRef, useEffect } from 'react';
 
 import resizeToFit from 'intrinsic-scale';
@@ -14,6 +14,7 @@ export default function ExpoDetailsImage({ bg }: { bg: string }) {
 
   const dispatch = useAppDispatch();
   const bgState = useAppSelector(selectContainerData);
+  const loading = useAppSelector(selectLoading);
 
   function saveImageData() {
     const image = imageRef.current!;
@@ -57,7 +58,7 @@ export default function ExpoDetailsImage({ bg }: { bg: string }) {
       ref={imageRef}
       src={bg}
       alt="expo"
-      className={'expo-details-bg'}
+      className={'expo-details-bg ' + (loading ? 'loading' : '')}
       style={{ width: bgState.width!, height: bgState.height!, left: bgState.left! }}
       onLoad={saveImageData}
     />

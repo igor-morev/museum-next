@@ -16,8 +16,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-width: 320px;
   color: white;
-  font-size: $base-text-size;
   background: black;
+  font-family: $font;
+  font-size: $base-text-size;
+  line-height: 1.5;
   &.ReactModal__Body--open {
     overflow: hidden;
   }
@@ -27,9 +29,9 @@ b {
   font-weight: bold;
 }
 
-p {
-  font-size: $base-text-size;
-}
+// p {
+//   font-size: $base-text-size;
+// }
 
 .modal {
   height: 100%;
@@ -163,4 +165,9 @@ img {
   user-select: none;
   position: relative;
   z-index: 2;
+}
+
+.loading {
+  opacity: 0;
+  visibility: hidden;
 }

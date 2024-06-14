@@ -1,5 +1,6 @@
 export interface ExpoDto {
   id: string;
+  number: string;
   prevId: null | string;
   nextId: null | string;
   heading: string;
