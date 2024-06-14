@@ -2,12 +2,13 @@ import { Tooltip } from 'react-tooltip';
 import React from 'react';
 
 import './ExpoTooltip.scss';
+import { ExpoDto } from '@/api';
 
-export default function ExpoTooltip(props: any) {
-  const { id, name, heading, description, place } = props;
+export default function ExpoTooltip({ expo }: { expo: ExpoDto }) {
+  const { id, heading, description, number } = expo;
   return (
-    <Tooltip place={place || 'top'} className="expo-tooltip" id={id}>
-      {name && <div className="expo-tooltip-name">{name}</div>}
+    <Tooltip place={'top'} className="expo-tooltip" id={id}>
+      <div className="expo-tooltip-name">Зона {number}</div>
       {heading && <div className="expo-tooltip-heading">{heading}</div>}
       {description && (
         <div

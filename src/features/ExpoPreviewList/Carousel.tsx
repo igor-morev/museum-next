@@ -123,11 +123,10 @@ export default function Carousel({
               transform: `translateX(${x}px)`,
             }}
           >
-            {expoItems.map((expo, index) => (
+            {expoItems.map((expo) => (
               <ExpoPreview
                 key={expo.id}
                 expo={expo}
-                index={index}
                 active={current ? current.id === expo.id : false}
               />
             ))}

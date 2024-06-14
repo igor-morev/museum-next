@@ -18,8 +18,6 @@ export default function ExpoBoard({ expoItems }: { expoItems: ExpoDto[] }) {
       <div className="expo-marks">
         <ExpoMarks marks={expoItems}></ExpoMarks>
       </div>
-
-      {/* <ExpoTooltip id={'mark'} name={name} heading={heading} description={description}/> */}
       <DynamicPosition top={2400} left={2300} context={bg}>
         <StartButton url="/expo/welcome_area" />
       </DynamicPosition>
