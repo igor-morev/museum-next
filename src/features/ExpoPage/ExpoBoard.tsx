@@ -2,7 +2,7 @@
 import ExpoListImage from './ExpoListImage';
 import ExpoMarks from './ExpoMarks';
 
-import './expoBoard.scss';
+import './ExpoBoard.scss';
 import { useAppSelector } from '@/hooks/store';
 import { selectContainerData } from '@/store/expoSlice';
 import StartButton from '@/ui/StartButton/StartButton';
