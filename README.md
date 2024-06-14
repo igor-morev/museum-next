@@ -3,6 +3,7 @@
 Check out the **live demo** ->
 
 ![Main expo page][preview]
+
 ![Details expo page][preview-page]
 
 ### Technologies
