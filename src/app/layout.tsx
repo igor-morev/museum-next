@@ -20,9 +20,7 @@ export default function RootLayout({
       <title>Мультимедийный центр теплоэнергетики</title>
       <body className={inter.className}>
         <main>
-          <div className="main-content">
-            <StoreProvider>{children}</StoreProvider>
-          </div>
+          <StoreProvider>{children}</StoreProvider>
         </main>
         <div id="modals" />
       </body>

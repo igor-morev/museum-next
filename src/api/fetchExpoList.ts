@@ -26,9 +26,3 @@ export async function fetchExpoList() {
     return item;
   });
 }
-
-export async function fetchExpoById(id: string) {
-  const expoList = await fetchExpoList();
-
-  return expoList.find((expo) => expo.id === id)!;
-}

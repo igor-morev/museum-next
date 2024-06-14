@@ -1,0 +1,59 @@
+@import '@/assets/scss/variables';
+
+$preview-width: 120px;
+$preview-hovered-width: 136px;
+
+.expo-preview {
+  margin-right: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  border-radius: 2px;
+  transition: all 0.24s;
+  width: $preview-width;
+  min-width: $preview-width;
+  height: 89px;
+  border: 1px solid transparent;
+  &.active {
+    border: 1px solid $brand-color;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    border-color: transparent;
+    border-radius: 4px;
+    transform: translateY(-14px);
+    .expo-preview-overlay {
+      width: $preview-hovered-width;
+      min-width: $preview-hovered-width;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.preview-number {
+  font-weight: bold;
+}
+
+.preview-name {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+.expo-preview-overlay {
+  padding: 1rem 1rem 1.5rem;
+  background: $brand-color;
+  height: calc(100% + 1rem);
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  width: 100%;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.24s;
+}

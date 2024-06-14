@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'mixins';
+
+$current-preview-width: 288px;
+
+.previews-container {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.current-preview {
+  width: $current-preview-width;
+  min-width: $current-preview-width;
+  img {
+    width: 240px;
+    margin-top: -55px;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
