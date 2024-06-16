@@ -1,6 +1,6 @@
 ## Digital interactive museum
 
-The digital interactive museum built on `NextJs`
+The digital interactive museum built on `NextJs`. Refactored from the old codebase [create-react-app](https://github.com/igor-morev/museum-react).
 
 > Check out the **live demo** -> https://museum-next-henna.vercel.app
 
